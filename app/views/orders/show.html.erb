@@ -4,8 +4,19 @@
     <h1>Order #<%= @order.id %></h1>
   </header>
 
+  <div>
   <div class="order-summary jumbotron">
     <h4>Thank you for your order!</h4>
+  </div>
+
+  <% @line_items.each do |item| %>
+    <%= render 'order_item', product: (get_product_info item.product_id), item: item %>
+  <% end %>
+
+
+  <div style="display: flex; justify-content: space-between;" class="order-summary jumbotron">
+    <h3>Total Cost:  <%= humanized_money_with_symbol @order.total_cents / 100.00%></h3>
+    <h3><%= @order.email%></h3>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>

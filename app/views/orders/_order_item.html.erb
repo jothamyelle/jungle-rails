@@ -1,0 +1,22 @@
+<article class="product-detail order">
+  
+      <div class="row">
+  
+        <div class="col-sm-4">
+          <%= image_tag product.image, class: 'img-thumbnail' %>
+        </div>
+  
+        <div class="col-sm-8">
+          <dl class="dl-horizontal">
+            <dt>Name</dt>
+            <dd><%= product.name%></dd>
+            <dt>Description</dt>
+            <dd><%= product.description%></dd>
+            <dt>Quantity</dt>
+            <dd><%= item.quantity%></dd>
+            <dt>Price</dt>
+            <dd><%= humanized_money_with_symbol item.total_price_cents / 100.00%></dd>
+          </dl>
+        </div>
+      </div>
+    </article>
