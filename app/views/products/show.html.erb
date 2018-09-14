@@ -23,6 +23,7 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
+        <h3 class="text-center">Current rating: <span style="color:red"><%= @reviewAvg %></span></h3>
         <% if current_user %>
         <h3 class="text-center">Leave a Review</h3>
         <%= form_for [@product, Review.new] do |form|%>
