@@ -6,7 +6,7 @@ A mini e-commerce application built with Rails 4.2 for purposes of teaching Rail
 ## Final Product
 ![Sold Out Badge](/public/soldout.png)
 ![Products Home Page](/public/products.png)
-![Single Product](/public/singleproducts.png)
+![Single Product](/public/singleproduct.png)
 
 
 ## Setup
